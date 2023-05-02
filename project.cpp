@@ -1,9 +1,9 @@
-// this program is prepared by CODE WARRIORS 
+// this program is prepared by CODE WARRIORS
 #include <iostream>
 #include <string>
 using namespace std;
 
-class MovieTicketBookingSystem {  //creat class
+class MovieTicketBookingSystem {  //create class
 private: //data members
     int seats[10] = {1,1,1,1,1,1,1,1,1,1}; // 1 means available, 0 means booked
     string movie;
@@ -32,7 +32,7 @@ void MovieTicketBookingSystem::displayMenu() {
         cout << "Enter your choice : ";
         cin >> choice; //1, 2 or 3
 
-        switch(choice) { 
+        switch(choice) {
             case 1:
                 bookTicket(); //call method by choice
                 break;
@@ -88,16 +88,23 @@ void MovieTicketBookingSystem::viewBooking() {
     cout << "Ticket price : " << ticketPrice << " Rupee" <<endl;
     cout << "Available seats : ";
     for (int i = 0; i < 10; i++) {
-        if (seats[i] == 0) {
+        if (seats[i] == 1) {
             cout << i+1 << " ";
         }
     }
-    cout<<endl;
+    cout << endl;
+    cout << "Booked seats : ";
+    for(int i = 0; i < 10; i++) {
+        if(seats[i] == 0) {
+            cout << i+1 << " ";
+        }
+    }
+    cout << endl;
 }
 
 int main() {
     MovieTicketBookingSystem M1; //Object
-    M1.displayMenu(); //call mehod by Object
+    M1.displayMenu(); //call method by Object
     cout<<endl<<"This program is prepared by CODE WARRIORS..";
     return 0;
 }
