@@ -17,15 +17,15 @@ public: //methods
 
 void MovieTicketBookingSystem::displayMenu() {
     int choice;
-    do {
-        cout << "============ Movie Ticket Booking System ============" << endl;
-        cout << "Enter Movie Title : ";
+     cout << "Enter Movie Title : ";
         fflush(stdin);
         getline(cin, movie);
         fflush(stdin);
         cout << "============ DATE ============" << endl;
         cout << "Enter Date like dd mm yyyy : ";
         cin >> dd >> mm >> yyyy;
+    do {
+        cout << "============ Movie Ticket Booking System ============" << endl;
         cout << "1. Book a ticket" << endl;
         cout << "2. View booking status" << endl;
         cout << "3. Exit" << endl;
